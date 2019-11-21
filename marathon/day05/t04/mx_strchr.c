@@ -1,0 +1,16 @@
+// #include <stdio.h>
+
+char *mx_strchr(const char *s, int c){
+    while(*s){
+        if(*s == c)
+            return (char*)s;
+        s++;
+    }
+    return 0;
+}
+/*
+int main(){
+    printf("%s\n", mx_strchr("abc", 99));
+    return 0;
+}
+*/
