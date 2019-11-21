@@ -20,10 +20,10 @@ void mx_del_strarr(char ***arr)
 /*
 int main() 
 {
-    char *s0 = (char *) malloc(5);
-    char *s1 = (char *) malloc(6);
-    char *s2 = (char *) malloc(3);
-    char **ss = (char **) malloc(4 *sizeof(char *));
+    char *s0 = malloc(5);
+    char *s1 = malloc(6);
+    char *s2 = malloc(3);
+    char **ss = malloc(4 * sizeof(char *));
 
     ss[0] = s0;
     ss[1] = s1;
