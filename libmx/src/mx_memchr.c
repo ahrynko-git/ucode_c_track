@@ -15,7 +15,7 @@ void *mx_memchr(const void *s, int c, size_t n)
 
     return NULL;
 }
-
+/*
 int main()
 {
     char str[] = "Hello";
@@ -26,4 +26,4 @@ int main()
 
     return 0;
 }
-
+*/

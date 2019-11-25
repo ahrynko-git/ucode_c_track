@@ -1,5 +1,4 @@
-// #include <stdio.h>
-// #include <string.h>
+#include "../inc/libmx.h"
 
 int mx_strlen(const char *s);
 
