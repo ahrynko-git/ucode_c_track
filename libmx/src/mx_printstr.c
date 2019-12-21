@@ -1,15 +1,5 @@
-#include <unistd.h>
+#include "../inc/libmx.h"
 
-int mx_strlen(const char *s);
-
-void mx_printstr(const char *s)
-{
+void mx_printstr(const char *s) {
     write(1, s, mx_strlen(s));
 }
-/*
-int main()
-{
-    mx_printstr("Hello");
-    return 0;
-}
-*/
