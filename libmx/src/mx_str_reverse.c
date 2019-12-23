@@ -1,27 +1,10 @@
-// #include <stdio.h>
+#include "../inc/libmx.h"
 
-int mx_strlen(const char *s);
-
-void mx_str_reverse(char *s)
-{
-    char tmp;
-    int i = 0;
+void mx_str_reverse(char *s) {
     int len = mx_strlen(s) - 1;
 
-    while(i != len)
-    {
-        tmp = s[i];
-        s[i] = s[len];
-        s[len] = tmp;
-        i++;
-        len--;
-    }
+    if (!s)
+        return;
+    for (int i = 0; i <= len / 2; i++)
+        mx_swap_char(&s[i], &s[len - i]);
 }
-/*
-int main()
-{
-    char str[] = "game over";
-    mx_str_reverse(str);
-    printf("%s\n", str);
-}
-*/
