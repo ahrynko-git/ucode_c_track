@@ -1,15 +1,17 @@
-#include <unistd.h>
-#include <wchar.h>
-#include <stdlib.h>
-#include <string.h>
-#include <fcntl.h>
-#include <stdbool.h>
-
-// for tests
-#include <stdio.h>
-
 #ifndef LIBMX_H
 #define LIBMX_H
+
+#include <unistd.h>
+#include <string.h>
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <fcntl.h>
+#include <wchar.h>
+#include <malloc/malloc.h>
+
+/* MY FUNCTIONS */
+int mx_isspace(char c);
 
 /* UTILS PACK */
 void mx_printchar(char c);

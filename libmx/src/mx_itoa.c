@@ -13,7 +13,7 @@ char *mx_itoa(int number) {
     for (int i = number; i / 10 != 0; i /= 10)
         len++;
     res = mx_strnew(len);
-    while(len--) {
+    while (len--) {
         res[len] = number % 10 + '0';
         number /= 10;
     }
