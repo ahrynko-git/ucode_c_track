@@ -1,4 +1,4 @@
-NAME = libmx.a
+NAME = libmx
 CFLAGS = -std=c11 -Wall -Werror -Wextra -Wpedantic
 OBJ = $(SRC:.c=.o)
 
@@ -59,13 +59,13 @@ SRC = mx_binary_search.c \
 all: install clean
 
 install:
-	@clang $(CFLAGS) -c $(addprefix src/, $(SRC)) -I $(./inc/libmx.h)
-	@ar -rc $(NAME) $(OBJ)
+	@clang $(CFLAGS) -c $(addprefix src/, $(SRC)) -I $(addsuffix .h, $(addprefix ./inc/, $(NAME)))
+	@ar -rc $(addsuffix .a, $(NAME)) $(OBJ)
 
 clean:
 	@rm -f $(OBJ)
 
 uninstall: clean
-	@rm -f $(NAME)
+	@rm -f $(addsuffix .a, $(NAME))
 
 reinstall: uninstall all
