@@ -1,20 +1,20 @@
-#include "../inc/libmx.h"
+#include "libmx.h"
 
 int mx_binary_search(char **arr, int size, const char *s, int *count) {
-    int m;
-    int l = 0;
-    int r = size - 1; 
-    
+    int middle;
+    int left = 0;
+    int right = size - 1;
+
     *count = 0;
-    while (l <= r) {
-        m = l + (r - l) / 2;
+    while (left <= right) {
+        middle = left + (right - left) / 2;
         *count += 1;
-        if (mx_strcmp(arr[m], s) > 0)
-            r = m - 1;
-        else if (mx_strcmp(arr[m], s) < 0)
-            l = m + 1;
+        if (mx_strcmp(arr[middle], s) > 0)
+            right = middle - 1;
+        else if (mx_strcmp(arr[middle], s) < 0)
+            left = middle + 1;
         else
-            return m;
+            return middle;
     }
     *count = 0;
     return -1;

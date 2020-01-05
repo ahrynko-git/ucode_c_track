@@ -1,4 +1,4 @@
-#include "../inc/libmx.h"
+#include "libmx.h"
 
 int mx_count_substr(const char *str, const char *sub) {
     int counter = 0;
@@ -6,13 +6,12 @@ int mx_count_substr(const char *str, const char *sub) {
 
     if (!str || !sub)
         return -1;
-    while (*str) {
+    for (; *str; str++) {
         s = mx_strstr(str, sub);
         if (s) {
-            str = s + strlen(sub) - 1;
+            str = s + mx_strlen(sub) - 1;
             counter++;
         }
-        str++;
     }
     return counter;
 }

@@ -1,4 +1,4 @@
-#include "../inc/libmx.h"
+#include "libmx.h"
 
 static void swap(char **arr, int l, int r) {
     char *tmp;

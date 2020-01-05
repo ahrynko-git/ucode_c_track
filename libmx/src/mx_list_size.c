@@ -1,4 +1,4 @@
-#include "../inc/libmx.h"
+#include "libmx.h"
 
 int mx_list_size(t_list *list) {
     t_list *tmp = list;
@@ -6,6 +6,6 @@ int mx_list_size(t_list *list) {
 
     if (list == NULL)
         return 0;
-    for (; tmp->next != NULL; tmp = tmp->next, counter++) {}
+    for (; tmp->next != NULL; tmp = tmp->next, counter++);
     return counter;
 }

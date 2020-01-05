@@ -1,4 +1,4 @@
-#include "../inc/libmx.h"
+#include "libmx.h"
 
 int mx_read_line(char **lineptr, size_t buf_size, char delim, const int fd) {
     static char *save_remainded_str = NULL;
@@ -6,7 +6,7 @@ int mx_read_line(char **lineptr, size_t buf_size, char delim, const int fd) {
     char *str = NULL;
     int index = -1;
     size_t read_bytes;
-    
+
     if (fd < 0 || buf_size < 0)
         return -2;
     if (save_remainded_str)

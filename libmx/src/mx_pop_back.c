@@ -1,10 +1,10 @@
-#include "../inc/libmx.h"
+#include "libmx.h"
 
 void mx_pop_back(t_list **head) {
-    t_list *current = *head;
-    
     if (head == NULL || *head == NULL)
         return;
+    t_list *current = *head;
+
     if (current->next == NULL) {
         free(*head);
         *head = NULL;

@@ -1,4 +1,9 @@
-#include "../inc/libmx.h"
+#include "libmx.h"
+
+// int main() {
+//     printf("%d\n", mx_isspace(' '));
+//     return 0;
+// }
 
 // int main() {
 //     mx_printchar('c');
@@ -180,8 +185,39 @@
 // }
 
 // int main() {
-//     printf("%s\n", mx_strndup("test", 7));
-//     printf("%s\n", strndup("test", 7));
+//     // printf("%s\n", mx_strndup("test", 7));
+//     // printf("%s\n", strndup("test", 7));
+
+//     printf("\033[0;32m");
+// 	printf("//************// CASE for MX_STRNDUP \\\\*******************|\n");
+// 	printf("\033[0m");
+// 	char *s = "Do not hate me for my code";
+// 	char *sq = "Do not hate me for my code";
+// 	char *temp;
+// 	char *temp1;
+// 	char *temp2;
+// 	char *temp3;
+// 	char *temp4;
+// 	char *temp5;
+//     char *temp6;
+//     char *temp7;
+//     char *temp8;
+//     char *temp9;
+// 	printf("--------------USER OUTPUT --------------------------------|\n");
+// 	printf("%s\n", temp = mx_strndup(s, 10));
+// 	printf("%s\n", temp1 = mx_strndup(s, -1));
+// 	printf("%s\n", temp2 = mx_strndup(s, 100));
+//     printf("%s\n", temp6 = mx_strndup(s, 0));
+// 	printf("--------------TEST OUTPUT --------------------------------|\n");
+// 	printf("%s\n", temp3 = strndup(sq, 10));
+// 	printf("%s\n", temp4 = strndup(sq, -1));
+// 	printf("%s\n", temp5 = strndup(sq, 100));
+//     printf("%s\n", temp7 = mx_strndup(s, 0));
+// 	printf("\033[0;32m");
+// 	printf("//************\\\\*********************//*******************|\n");
+// 	printf("\033[0m");
+// 	printf("\n\n");
+
 //     system("leaks -q a.out");
 //     return 0;
 // }
@@ -207,7 +243,7 @@
 
 // int main() {
 //     char *s1 = "abc";
-//     char *s2 = "adc";
+//     char *s2 = "abc";
 //     printf("%d\n", mx_strcmp(s1, s2));
 //     printf("%d\n", strcmp(s1, s2));
 //     system("leaks -q a.out");
@@ -232,6 +268,22 @@
 //     printf("strstr %s\n", strstr(needle, haystack));
 //     printf("mx_strstr %s\n", mx_strstr("Ururu turu", "ru"));
 //     printf("strstr %s\n", strstr("Ururu turu", "ru"));
+
+//     printf("\033[0;32m");
+// 	printf("//************// CASE for MX_STRSTR \\\\********************|\n");
+// 	printf("\033[0m");
+// 	char haystack[] = "To ezz 4 me, brro";
+// 	printf("--------------USER OUTPUT --------------------------------|\n");
+// 	printf("%s\n", mx_strstr(haystack, "ezu"));
+// 	printf("%s\n", mx_strstr(haystack, "me"));
+// 	printf("--------------TEST OUTPUT --------------------------------|\n");
+// 	printf("%s\n", strstr(haystack, "ezu"));
+// 	printf("%s\n", strstr(haystack, "me"));
+// 	printf("\033[0;32m");
+// 	printf("//************\\\\********************//********************|\n");
+// 	printf("\033[0m");
+// 	printf("\n\n");
+
 //     system("leaks -q a.out");
 //     return 0;
 // }
@@ -257,12 +309,32 @@
 // }
 
 // int main() {
-//     char *str = " follow * the white rabbit ";
+//     // char *str = " follow * the white rabbit ";
 
-//     printf("%d\n", mx_count_words(str, '*')); //returns 2
-//     printf("%d\n", mx_count_words(str, ' ')); //returns 5
-//     printf("%d\n", mx_count_words(NULL, ' ')); //returns -1
+//     // printf("%d\n", mx_count_words(str, '*')); //returns 2
+//     // printf("%d\n", mx_count_words(str, ' ')); //returns 5
+//     // printf("%d\n", mx_count_words(NULL, ' ')); //returns -1
+//     // system("leaks -q a.out");
+
+//     printf("\033[0;32m");
+// 	printf("//************// CASE for MX_COUNT_WORDS \\\\**************|\n");
+// 	printf("\033[0m");
+// 	char str7[] = " follow   * the white rabbit ";
+// 	char str[] = "";
+// 	printf("--------------USER OUTPUT --------------------------------|\n");
+// 	printf("%d\n", mx_count_words(str7, ' ')); //5
+// 	printf("%d\n", mx_count_words(str7, '*')); //2
+// 	printf("%d\n", mx_count_words(str7, 'x')); //1
+// 	printf("%d\n", mx_count_words(str, ' ')); //0
+// 	printf("%d\n", mx_count_words(NULL, 'x')); //-1
+// 	printf("--------------TEST OUTPUT --------------------------------|\n");
+// 	printf("5\n2\n1\n0\n-1\n");
+// 	printf("\033[0;32m");
+// 	printf("//************\\\\**************************//**************|\n");
+// 	printf("\033[0m");
+// 	printf("\n\n");
 //     system("leaks -q a.out");
+
 //     return 0;
 // }
 
@@ -278,13 +350,41 @@
 //     char *name = "\f My name... is Neo \t\n ";
 
 //     printf("%s\n", mx_strtrim(name)); // returns "My name... is Neo";
+
+//     printf("\033[0;32m");
+// 	printf("//************// CASE for MX_STRTRIM \\\\*******************|\n");
+// 	printf("\033[0m");
+// 	char *name = "	\f    My     name...	is  \t  Neo	\t\n";
+// 	printf("--------------USER OUTPUT --------------------------------|\n");
+// 	printf("%s\n", name = mx_strtrim(name));
+// 	printf("--------------TEST OUTPUT --------------------------------|\n");
+// 	printf("My     name...	is  \t  Neo\n");
+// 	printf("\033[0;32m");
+// 	printf("//************\\\\*********************//*******************|\n");
+// 	printf("\033[0m");
+// 	printf("\n\n");
+
 //     system("leaks -q a.out");
 //     return 0;
 // }
 
 // int main() {
-//     char name[] = "\f My name... is \r Neo \t\n ";
-//     printf("%s\n", mx_del_extra_spaces(name)); //returns "My name... is Neo" // 17
+//     // char name[] = "\f My name... is \r Neo \t\n ";
+//     // printf("%s\n", mx_del_extra_spaces(name)); //returns "My name... is Neo" // 17
+//     printf("\033[0;32m");
+// 	printf("//************// CASE for MX_DEL_EXTRA_SPACES \\\\**********|\n");
+// 	printf("\033[0m");
+// 	char *name1 = "\f My    name... \r \n \t  \tis  \t    Neo \t\n";
+// 	printf("--------------USER OUTPUT --------------------------------|\n");
+// 	printf("%s\n", name1 = mx_del_extra_spaces(name1));
+// 	printf("%d\n", mx_strlen(name1)); //17
+// 	printf("--------------TEST OUTPUT --------------------------------|\n");
+// 	printf("My name... is Neo\n");
+// 	printf("17\n");
+// 	printf("\033[0;32m");
+// 	printf("//************\\\\******************************//**********|\n");
+// 	printf("\033[0m");
+// 	printf("\n\n");
 //     system("leaks -q a.out");
 // }
 
