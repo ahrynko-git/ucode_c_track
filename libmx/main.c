@@ -409,7 +409,7 @@ int main() {
 // }
 
 // int main(int argc, char **argv) {
-//     if(argc > 1)
+//     if (argc > 1)
 //         printf("%s", mx_file_to_str(argv[1]));
 //     system("leaks -q a.out");
 //     return 0;
