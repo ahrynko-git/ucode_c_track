@@ -19,9 +19,11 @@ all: install clean
 install:
 	@clang $(CFLAGS) -c $(addprefix src/, $(SRC)) -I ./inc
 	@ar -rc $(NAME) $(OBJ)
+	@mkdir obj
+	@mv $(OBJ) ./obj
 
 clean:
-	@rm -f $(OBJ)
+	@rm -rf ./obj
 
 uninstall: clean
 	@rm -f $(NAME)
